@@ -7,6 +7,7 @@
 body {
     font-family: Helvetica, Verdana, Arial, sans-serif;
     color: rgb(90, 90, 90);
+    font-size: 100%;
 }
 
 section{
@@ -31,6 +32,18 @@ header, main, aside, footer{
 }
 
 h1, h2, h3{
+    color: white;
     text-align: center;
-text-transform: uppercase;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow:  1px 1px black;
 }
+
+p{
+    text-indent: 30px;
+    line-height: 1.2;
+}
+a{
+    text-decoration: none;
+}
+
