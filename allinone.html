@@ -1,0 +1,514 @@
+<!--To jest dokument HTML5, który wykorzystuje wszystkie dostępne znaczniki HTML-->
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <title>Wszystko w jednym</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Dokument html zawierający wszystkie znaczniki w tym języku">
+    <meta name="keywords" content="Znaczniki html, wszystkie tagi w html, html5 w pigułce">
+    <meta name="author" content="Dominik Hatemelowiec V">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <base href=""
+        target="_blank">
+        zdaje się, że znacznik <base> nie do końca dobrze działa w przypadku plików lokalnych - wyrzuca niemalże zawsze do dysku "D"-->
+    <link rel="icon" href="D:/Programowanie/Kursy/WEB/HTML/W3C/Stron%20internetowa%20zawieraj%C4%85ce%20wszystkie%20elementy%20markupu/favicon.svg"
+        type="image/svg+xml">
+    <!--fav ikona nie działa jeśli jest zapisana w svg-->
+    <!--Wpisanie między wiersze podstawowych stylów skraca krytyczną ścieżkę renderowania-->
+   <style>
+        body{
+            margin: 0;
+            font-size:1em;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            grid-gap: 0.5em;
+            grid-template-areas: "header header"
+            "main aside"
+            "footer footer"
+            
+        }
+        nav, main, aside, footer, section{
+            border: 2px groove threedface;
+            padding:1em
+        }
+
+        header{
+            grid-area: header
+        }
+        main{
+            grid-area: main
+        } 
+        aside{
+            grid-area: aside
+        } 
+        footer{
+            grid-area: footer
+        } 
+        
+          
+        h1{
+            padding: 1em;
+            margin: 0;
+        }
+
+        header, nav, main, aside, footer{
+            background-color: lightgray;
+        }
+
+        section{
+            background-color: whitesmoke;
+        }
+
+        ol section{
+            background-color: white;
+        }
+
+        iframe{
+            width: 100%;
+        }
+
+        #webtechnologieslogos img{
+            width: 20vw;
+        }
+
+        table, th, td{
+            border: 2px groove threedface;
+        }
+
+        th{
+            background-color: rgb(250, 250, 250);
+        }
+
+        tr:nth-child(odd) td:nth-child(even){
+            background-color: white;
+        }
+
+        tr:nth-child(even) td:nth-child(odd){
+            background-color: white;
+        }
+
+        form, fieldset{
+            display: grid
+        
+        }
+
+    </style>
+    <!--Kolejność definowanych stylów ma znaczenie- przeglądarka będzie stosować dla danego elementu styl, który występuje później w kodzie-->
+    <link rel="stylesheet" href="main.css" type="text/css">
+</head>
+
+<body>
+
+    <header title="Nagłówek stawnowi wprowadzenie do elementu będącego jego bezpośrednim potomkiem lub do następującej po nim sekcji.">
+        <h1>Nagłówek Podstawowy informujący o zawartości strony</h1>
+
+        <nav id="navigation" title="Nawigacja pozwala przejść bezpośrednio do szukanego elementu bez potrzeby przeszukiwania całej zawartości strony po kolei.">
+            <h2>Nawigacja tkz. menu</h2>
+            <section title="Nawigacja tradycyjnie zapisywana jest w formie listy uporządkowanej, co pozwala robotom indeksującym na łatwiejsze rozpoznawanie treści.">
+                <h3>Lista uporządkowana</h3>
+                <ol>
+                    <li>
+                        <section title="Listy można wielokrotnie zagnieżnać wewnątrz nadrzędnych list, tworząc tym samym uporządkowaną hierarchię.">
+                            <h4>Zagnieżdżona lista nieuporządkowana - cztery podstawowe sekcje strony</h4>
+                            <ul>
+                                <li><a href="#navigation">Nawigacja</a></li>
+                                <li><a href="#maincontent">Zawartość główna</a></li>
+                                <li><a href="#asidecontent">Zawartość poboczna</a></li>
+                                <li><a href="#footer">Stopka</a></li>
+                            </ul>
+                        </section>
+                    </li>
+                    <li>
+                        <section>
+                            <h4>Zagnieżdżona lista nieuporządkowana - pomniejsze sekcje tematyczne strony ze względu na
+                                kategorię tagów html, które zawierają</h4>
+                            <ul>
+                                <li><a href="#basictags">Tagi podstawowe</a></li>
+                                <li><a href="#formatting">Formatowanie tekstu</a></li>
+                                <li><a href="#frames">Ramki- zagnieżdżanie w stronie treści z innych witryn</a></li>
+                                <li><a href="#multimedia">Multimedia</a>
+                                    <ul>
+                                        <li><a href="#video">Video</a></li>
+                                        <li><a href="#audio">Audio</a></li>
+                                    </ul>
+
+                                </li>
+
+                                <li><a href="#images">Obrazy</a>
+                                    <ul>
+                                        <li><a href="#webtechnologieslogos">Logotypu technologii webowych</a></li>
+                                        <li><a href="#imagemap">Mapa obrazu</a></li>
+                                        <li><a href="#canvas">Płótno</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#lists">Listy</a></li>
+                                <li><a href="#tables">Tabele</a></li>
+                                <li><a href="#form">Formularz</a></li>
+
+
+                            </ul>
+                        </section>
+                    </li>
+                </ol>
+            </section>
+        </nav>
+    </header>
+    <main id="maincontent">
+        <h2>Zawartość główna</h2>
+        <section id="basictags">
+            <h3>Podstawowe tagi html</h3>
+            <p>Dokument zawiera w sobie wszystkie podstawowe tagi, które tworzą zasadniczą strukturę każdej strony.
+                Aby
+                dokładniej przyjrzeć się stronie kliknij prawym przyciskiej myszy i z menu rozwijanego wybierz
+                opcję
+                "Zbadaj", znajdź w strukturze opisywane poniżej znaczniki. Struktura została opracowana tak, by być
+                w
+                zgodnie z standardem html5 oraz wytycznymi W3C. Wszystkie tagi poza podstawowymi nie zostaną
+                zdefiniowane, a jedynie użye w taki sposób, żeby ich funkcja była oczywista po wyświetleniu kodu
+                źródłowego. Wiele z tagów posiada także atrybuty, które szczegółowo określają charakter danego
+                elementu
+                struktury. Większość z nich także została wykorzystana do budowy tej strony. Do
+                tagów podstawowych zaliczamy:</p>
+            <dl>
+                <dt><dfn>&lt;!DOCTYPE html&gt;</dfn></dt>
+                <dd>Określa format dokumentu- daje do zrozumienia przeglądarce, że ma doczynienia z html</dd>
+                <dt><dfn>&lt;head&gt;</dfn></dt>
+                <dd>Zawiera meta-dane potrzebne przeglądarce do prawidłowego wyświetlania strony. Jego zawartość
+                    nie
+                    jest pokazywana użytkownikowi</dd>
+                <dt><dfn>&lt;body&gt;</dfn></dt>
+                <dd>Zawiera właściwą treść strony- to ten fragment będzie widoczny dla użytkownika</dd>
+                <dt><dfn>&lt;h1&gt; do &lt;h6&gt;</dfn></dt>
+                <dd>Znacznik definiuje nagłówki- im większa liczba stoi po "h", tym mniej istotny nagłówek</dd>
+                <dt><dfn>&lt;p&gt;</dfn></dt>
+                <dd>Znacznik definiuje paragraf w tekście</dd>
+                <dt><dfn>&lt;br&gt;</dfn></dt>
+                <dd>Znacznik powoduje złamanie tekstu</dd>
+                <dt><dfn>&lt;hr&gt;</dfn></dt>
+                <dd>Znacznik informuje o zmianie wątku, często jest wyświetlany jako pozioma linia (ang. horizontal
+                    rule, stąd hr)</dd>
+                <dt><dfn>&lt;!--komentarz--&gt;</dfn></dt>
+                <dd>Znacznik pozwalający na napisanie komentarza, który nie jest wyświetlany użytkownikowi, a może
+                    być
+                    pomocny dla programisty</dd>
+            </dl>
+        </section>
+        <hr>
+        <section id="formatting">
+            <h3>Formatowanie tekstu za pomocą znaczników html</h3>
+            <p>
+                Tę sekcję poświęcę formatowaniu tekstu w języku <abbr title="HyperText Markup Language">HTML</abbr>.
+                Wewnątrz tego i kolejnego
+                paragrafu znajdą się najczęściej używane znaczniki służące do formatowania tekstu, wyświetl źródło
+                strony, żeby im się przyjrzeć. Poniższy cytat
+                pochodzi z artykuły hasłowego pt. <cite>HTML</cite> na portalu <address>wikipedia</address> z dnia:
+                <time>2016-11-11</time>.
+            </p>
+            <blockquote cite="https://pl.wikipedia.org/wiki/HTML"><strong><dfn>HTML</dfn></strong> pozwala opisać
+                <em>strukturę
+                    informacji</em> zawartych wewnątrz strony internetowej, nadając znaczenie
+                poszczególnym fragmentom tekstu – formując hiperłącza, akapity, nagłówki, listy – oraz osadza w
+                tekście
+                dokumentu obiekty plikowe np. multimedia bądź elementy baz danych np. interaktywne formularze
+                danych.
+
+                <strong>HTML</strong> umożliwia określenie wyglądu dokumentu w przeglądarce internetowej. Do <em>szczegółowego
+                    opisu formatowania</em> <sub>akapitów, nagłówków,</sub> <sup>użytych czcionek i kolorów,</sup>
+                zalecane jest
+                wykorzystywanie <del>html</del>
+                <ins>kaskadowych
+                    arkuszy stylów.</ins>
+            </blockquote>
+        </section>
+        <hr>
+        <section id="frames">
+            <h3>Ramki</h3>
+            <p>Jedynym dozwolonym w html5 sposobem na zapożyczanie treści z zewnętrznych źródeł jest znacznik <i>&lt;iframe&gt;</i>.</p>
+            <iframe src="http://www.glowacki.p9.pl/nowa_strona/strony/niedatowane/kurs_html5/k_2_3_1.php">
+            </iframe>
+        </section>
+        <hr>
+        <section id="multimedia">
+            <h3>Multimedia</h3>
+            <section id="audio">
+                <h4>Audio</h4>
+                <audio controls>
+                    <source src="https://freesound.org/data/previews/440/440811_4809241-lq.mp3" type="audio/mpeg">
+                </audio>
+            </section>
+            <section id="video">
+                <h4>Video</h4>
+                <video controls autoplay loop muted poster="http://www.bu.edu/cs/files/2017/03/subject-box-2a.jpg">
+                    <source src="https://www.youtube.com/d2eecb5d-4f65-470f-b104-0398bc92d756" type="video/mp4">
+                </video>
+            </section>
+        </section>
+        <hr>
+        <section id="images">
+            <h3>Obrazy</h3>
+            <p>Sam html5 pozwala zrobić zadziwiająco wiele w obrazami. Nie zdawałem sobie sprawy, że prosty język
+                skryptowy pozwala na tak ciekawe manipulacje jak chociażby <em>mapowanie obrazu</em>.</p>
+            <section id="webtechnologieslogos" title="Loga technologii webowych">
+                <h4>Loga podstawowych technologii (języki programowania i język skrypotowy) pozwalających tworzyć
+                    witryny i
+                    aplikacje internetowe.</h4>
+                <a href="http://www.w3.org/html/logo/">
+                    <figure>
+                        <picture>
+                            <source media="(orientation: landscape)" srcset="https://www.fullstackpython.com/img/logos/html.jpg">
+                            <source media="(monochrome:2)" srcset="https://www.w3.org/html/logo/downloads/HTML5_1Color_Black.svg">
+                            <img src="https://www.w3.org/html/logo/badge/html5-badge-h-semantics.png" width="133"
+                                height="64" alt="HTML5 Powered with Semantics" title="HTML5 Powered with Semantics">
+                        </picture>
+                        <figcaption>HTML5 - logo utworzone przez społeczność</figcaption>
+                    </figure>
+                </a>
+                <figure>
+                    <picture>
+                        <source media="(monochrome:2)" srcset="http://cdn.onlinewebfonts.com/svg/img_565439.png">
+                        <source media="(min-width:2000px)" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/2000px-CSS3_logo_and_wordmark.svg.png">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/CSS.3.svg/730px-CSS.3.svg.png"
+                            alt="Logo kaskadowych arkuszy stylów">
+                    </picture>
+                    <figcaption>CSS (Kaskadowe arkusze stylów) - logo utworzone przez społeczność</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://blog.domandtom.com/wp-content/uploads/2016/09/javascript.png" alt="Logo ECMA Script zwanego popularnie JacaScript">
+                    <figcaption>JavaScript - logo utworzone przez społeczność</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/250px-PHP-logo.svg.png"
+                        alt="Logo PHP">
+                    <figcaption>PHP</figcaption>
+                </figure>
+            </section>
+            <section id="imagemap">
+                <h4>Mapa technologii webowych</h4>
+                <figure><img src="https://www.empressem.net/wp-content/uploads/2016/08/Web-technologies.png" alt="Ilustracja przedstawiająca najpopularniejsze technologie służące do budowy współczesnych witryn i aplikacji internetowych"
+                        usemap="#technologiesmap">
+                    <figcaption>Kliknij na oznaczenie technologii, aby przenieść się do tematu, który Cię interesuje.</figcaption>
+                </figure>
+                <map name="technologiesmap">
+                    <area shape="circle" coords="296,112,30" href="https://www.w3schools.com/html/default.asp" alt="kurs html5">
+                    <area shape="circle" coords="245,156,40" href="https://www.w3schools.com/css/default.asp" alt="kurs CSS">
+                    <area shape="circle" coords="377,96,20" href="https://www.w3schools.com/js/default.asp" alt="kurs JavaScript">
+                    <area shape="circle" coords="429,181,40" href="https://www.w3schools.com/php/default.asp" alt="kurs PHP">
+                </map>
+            </section>
+            <section id="canvas">
+                <h4>Płótno (Canvas)</h4>
+                <figure><canvas></canvas>
+                    <figcaption>Płótno służy do dynamicznego generowania grafiki- zazwyczaj za pomocą JavaScript. Ma
+                        wiele zastosowań. Używa też różnych metod rysunku- ścieżek, kół, kwadratów, textu czy
+                        ilustracji. Płótno reaguje na wszystkie wydarzenia w JavaSrcipt - kliknięcia myszą, uderzenia w
+                        klawisze, przesunięcie palców.</figcaption>
+                </figure>
+
+            </section>
+
+        </section>
+        <hr>
+        <section id="lists">
+            <h3>Rodzaje list</h3>
+            <dl>
+                <dt><dfn>Lista opisów</dfn></dt>
+                <dd>Lista zawierająca definicje i opisy definiowanych terminów- dokładnia taka jak ta!</dd>
+                <dt><dfn>Lista numeryczna (uporządkowana)</dfn></dt>
+                <dd>Lista terminów poprzedzona indeksem</dd>
+                <dt><dfn>Lista nieuporządkowana</dfn></dt>
+                <dd>Lista terminów poprzedzona punktorem</dd>
+            </dl>
+        </section>
+        <hr>
+        <section id="tables">
+            <h3>Tabele</h3>
+            <table>
+                <caption></caption>
+                <colgroup>
+                    <col span="4" id="separate">
+                    <col id="joinedheader">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>
+                            Nagłówek kolumny I
+                        </th>
+                        <th>
+                            Nagłówek kolumny II
+                        </th>
+                        <th>
+                            Nagłówek kolumny III
+                        </th>
+                        <th>
+                            Nagłówek kolumny IV
+                        </th>
+                        <th>
+                            Nagłówek kolumny V
+                        </th>
+                        <th colspan="2">
+                            Nagłówek kolumny VI i VII
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>komórka I w kolumnie I</td>
+                        <td>komórka II w kolumnie I</td>
+                        <td>komórka III w kolumnie I</td>
+                        <td>komórka IV w kolumnie I</td>
+                        <td>komórka V w kolumnie I</td>
+                        <td>komórka VI w kolumnie I</td>
+                        <td>komórka VII w kolumnie I</td>
+                    </tr>
+                    <tr>
+                        <td>komórka I w kolumnie II</td>
+                        <td>komórka II w kolumnie II</td>
+                        <td>komórka III w kolumnie II</td>
+                        <td>komórka IV w kolumnie II</td>
+                        <td>komórka V w kolumnie II</td>
+                        <td>komórka VI w kolumnie II</td>
+                        <td>komórka VII w kolumnie II</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>komórka I w stopce</td>
+                        <td>komórka II w stopce</td>
+                        <td>komórka III w stopce</td>
+                        <td>komórka IV w stopce</td>
+                        <td>komórka V w stopce</td>
+                        <td>komórka VI w stopce</td>
+                        <td>komórka VII w stopce</td>
+                    </tr>
+
+                </tfoot>
+            </table>
+        </section>
+        <hr>
+        <section id="programming">
+            <h3>Programowanie</h3>
+            <p>Nie zobaczysz tu niczego szczególnego, ponieważ kod źródłowy nie jest wyświetlany przez przeglądarkę.
+                Żeby zobaczyć, co się tak na prawdę dzieje "pod maską" zbadaj tę sekcję klikając prawym przyciskiem
+                myszy na element, a później wybierz z menu podręcznego opcję "Zbadaj".</p>
+            <p>Dlaczego ta sekcja znajduje się niemalże na końcu strony? Ma to związek z tkz. krytyczną ścieżką
+                renderowania. <a href="https://blog.logrocket.com/how-browser-rendering-works-behind-the-scenes-6782b0e8fb10">Kliknij
+                    by dowiedzieć się więcej.</a></p>
+        </section>
+    </main>
+    <aside id="asidecontent">
+        <h2>Zawartość poboczna</h2>
+        <section id="form">
+            <h3>formularz</h3>
+            <form action="/action.php" method="POST" name="formone" autocomplete="on" target="_top" oninput="formoneoutput.value=parseInt(rangeinput.value)">
+                <fieldset>
+                    <legend>
+                        Pola tekstowe
+                    </legend>
+                    <label for="textinput">Dane tekstowe</label><input name="textinput">
+                    <label for="emailinput"></label>Adres e-mail<input type="email" name="emailinput">
+                    <textarea form="formone" placeholder="Tutaj wpisz tekst" required="" wrap="soft">Usuń ten tekst i kliknij obok obszaru pisania, żeby zobaczyć plejsholdera</textarea>
+                    <label for="urlinput"></label>Adres internetowy (url)<input type="url" name="urlinput">
+                    <label for="searchinput"></label>Pole wyszukiwania<input type="search" name="searchinput">
+                    <label for="passwordinput"></label>Hasło<input type="password" name="passwordinput">
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        Pola do danych numerycznych
+                    </legend>
+                    <label for="dateinput">Data</label><input type="date" min="2000-01-01" name="dateinput">
+                    <label for="datetime-localinput">Data z uwzględnieniem czasu lokalnego</label><input type="datetime-local"
+                        max="2020-01-01" name="datetime-localinput">
+                    <label for="monthinput">Rok i miesiąc</label><input type="month" name="monthinput">
+                    <label for="weekinput">Tydzień</label><input type="week" name="weekinput">
+                    <label for="timeinput">Godzina</label><input type="time" name="timeinput">
+                    <label for="numberinput">Numer nie mniejszy niż 1 i nie większy niż pięć</label><input type="number"
+                        min="1" max="5" name="numberinput">
+                    <label for="rangeinput">Zakres numeryczny o skoku równym 10</label><input type="range" value="75"
+                        min="0" max="150" step="10" name="rangeinput">
+                    <output name="formoneoutput" for="rangeinput"></output>
+                    <label for="telinput"></label>Nr telefonu<input type="tel" name="telinput">
+                    <label for="colorinput">Wybierz kolor (dane zostaną zapisane w postaci szesnastkowej</label>
+                    <input type="color" name="colorinput">
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        Dane w postaci plików
+                    </legend>
+                    <label for="fileinput">Plik</label><input type="file" name="fileinput">
+
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        Lista predefiniowanych wartości z rozróżnieniem między wyświetlaną treścią a wartością wysyłaną
+                        do
+                        serwera
+                    </legend>
+                    <section>
+                        <h4>Wybierz wartość</h4>
+                        <select name="selectinputone">
+                            <option value="1">Jeden</option>
+                            <option value="2">Dwa</option>
+                            <option value="3">Trzy</option>
+                        </select>
+                    </section>
+
+                    <section>
+                        <h4>Wybierz wartość</h4>
+                        <label for="idoftheelemnt"></label>
+                        <select>
+                            <optgroup label="Raz dwa trzy">
+                                <option value="1">Raz</option>
+                                <option value="2">Dwa</option>
+                                <option value="3">Trzy</option>
+                            </optgroup>
+                            <optgroup label="Cztery pięć sześć">
+                                <option value="4">Cztery</option>
+                                <option value="5">Pięć</option>
+                                <option value="6">Sześć</option>
+                            </optgroup>
+                        </select>
+                    </section>
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        Lista predefiniowanych wartości
+                    </legend>
+                    <label for="datalist">Wybierz wartość</label><input list="datalist" name="datalist">
+                    <datalist id="datalist">
+                        <option value="1">
+                        <option value="2">
+                        <option value="3">
+                        <option value="4">
+                    </datalist>
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        Wielokrotny wybór oraz checkbox i kolor
+                    </legend>
+                    <label for="radioinput">Wybierz płeć</label>
+                    <input type="radio" name="radioinput" value="male">Mężczyzna
+                    <input type="radio" name="radioinput" value="female">Kobieta
+                    <label for="checkboxinput">Odhacz ptaszka</label>
+                    <input type="checkbox" name="checkboxinput">
+                </fieldset>
+                <input type="reset">
+                <input type="submit">
+                <label for="imagesinput">Kliknij na obraj zby przesłać formularz:</label><input type="image" src="https://www.iconsdb.com/icons/preview/black/arrow-32-xxl.png"
+                    alt="Prześlij" name="imagesinput">
+            </form>
+        </section>
+    </aside>
+    <footer id="footer">
+        <h2>Stopka</h2>
+        <address></address>
+        <details>
+            <summary>&copy; Dominik Kowalczyk 2018. All rights reserved.</summary>
+            <p>All content and graphics on this web site are the property of Dominik Kowalczyk.</p>
+        </details>
+    </footer>
+
+
+</body>
+
+</html>
